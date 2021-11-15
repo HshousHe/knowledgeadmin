@@ -43,7 +43,7 @@ git branch 创建新分支
 git branch -d (branchname)
 ```
 
-### git 如何退出 VIM 编辑器
+## git 如何退出 VIM 编辑器
 
 按下esc
 
@@ -52,3 +52,19 @@ git branch -d (branchname)
 或wq! 回车 表示保存并退出
 
 git log 按 q退出
+
+## github 创建个人个人访问令牌
+
+::: tip 介绍
+ github 已不再支持密码做验证登录 需要自己创建个人访问令牌做权限管理和分配
+:::
+::: warning 注意
+   令牌一定要记得复制保存 处于安全考虑 当你退出当前令牌生成页面之后你将看不到令牌代码
+:::
+
+1. 点击个人中心头像 选择 Developer settings（开发人员设置）
+2. 选择 Personal access tokens （个人访问令牌）
+3. 点击 Generate new tokne （设置新的访问令牌）
+4. 选择权限分配完成之后点击Generate tokne（生成令牌）
+5. 拿到令牌 复制保存 
+6. 使用令牌 正常连接github会给你调起登录框 密码框中不在输入密码输入令牌即可

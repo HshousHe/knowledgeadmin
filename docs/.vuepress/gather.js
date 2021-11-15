@@ -20,7 +20,7 @@ module.exports = [
         path: "/guide/personal/npm",
     },
     {
-        title: "api与样式兼容",
+        title: "api-样式兼容-版本管理",
         collapsable: true,
         path: "/guide/compatibility/css",
     },
