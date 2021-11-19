@@ -159,3 +159,28 @@ github 已不再支持密码做验证登录 需要自己创建个人访问令牌
 10. Promise
 
 查看详情 [原作者地址](https://zhuanlan.zhihu.com/p/427857918)
+
+
+## NoPrint.js--JavaScript在HTML中禁用打印、截屏、复制和粘贴
+
+::: tip NoPrint.js可以做什么
+  禁用复制和粘贴
+  禁用打印
+  禁用鼠标右键
+  禁用截图
+  禁用“另存为”/ Ctrl + S
+  自动模糊
+:::
+
+### 简单使用
+
+```js
+//引入noprint.js cdn地址 https://pdfanticopy.com/noprint.js
+var noPrint=true;//noPrint将禁用 CTRL + P 快捷键和打印功能。即使浏览者尝试通过浏览器菜单或按钮打印网页，打印时内容也会变成空白页面。可以将noPrint设置为false以关闭打印保护。
+var noCopy=true;//noCopy将禁用文本选择、鼠标右键、CTRL + S（保存网页）以及复制和粘贴功能。可以将noCopy设置为false以关闭此保护。
+var noScreenshot=true;//noScreenshot将禁用PrintScreen键以防止访问者轻松截屏和获取网页快照。可以将 noScreenshot设置为false以关闭此功能。
+var autoBlur=true;//一旦鼠标光标离开内容区域，autoBlur 会将网页上的所有内容变为模糊。浏览者可以通过单击网页来让内容变回清晰的样子。这可以防止人们通过第三方应用程序或 Opera工具栏上的快照功能截取屏幕截图。可以将autoBlur设置为false以禁用自动模糊
+
+```
+
+官网地址 [noprint.js](https://pdfanticopy.com/index.html)
