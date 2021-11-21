@@ -135,3 +135,35 @@ imgToBase64(data){
 	})
 }
 ```
+
+## node 定时任务
+
+```js
+//依赖
+npm install node-schedule
+
+//使用
+
+var schedule = require('node-schedule');
+
+var j = schedule.scheduleJob('42 50 8 * *', function(){//每天的8点，50分，42秒定时发送邮件
+    //业务
+});
+
+```
+
+### 执行
+
+```js
+//依赖
+npm install -g forever
+
+//使用
+
+forever start index.js     //index.js是你要启动的js文件
+
+forever list    //会列出forever正在运行的服务脚本
+
+forever stop index.js   //停止服务运行
+
+```

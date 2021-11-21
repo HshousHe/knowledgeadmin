@@ -72,7 +72,7 @@ github 已不再支持密码做验证登录 需要自己创建个人访问令牌
 ## ES6-N
 
 ::: tip 介绍
-  介绍ES6-ES13 中的新增特性
+介绍 ES6-ES13 中的新增特性
 :::
 
 #### ECMAScript 2022(ES13)提案阶段，更倾向于面向对象
@@ -124,7 +124,7 @@ github 已不再支持密码做验证登录 需要自己创建个人访问令牌
 
 1. 异步迭代：await 可以和 for...of 循环一起使用，以串行的方式运行异步操作
 2. Promise.finally()：逻辑只可以放在一个地方，这有点像以前 jQuery ajax 的 complete
-3. Rest/Spread 属性：允许我们将一个剩余参数表示为一个数组正则表达式命名捕获组：允许命名捕获组使用符号?< name  >
+3. Rest/Spread 属性：允许我们将一个剩余参数表示为一个数组正则表达式命名捕获组：允许命名捕获组使用符号?< name >
 4. 正则表达式反向断言(lookbehind)
 5. 正则表达式 dotAll 模式：正则表达式中点.匹配除回车外的任何单字符，标记 s 改变这种行为，允许行终止符的出现
 6. 正则表达式 Unicode 转义: Unicode 属性转义形式为\p{...}和\P{...}
@@ -160,27 +160,50 @@ github 已不再支持密码做验证登录 需要自己创建个人访问令牌
 
 查看详情 [原作者地址](https://zhuanlan.zhihu.com/p/427857918)
 
+## NoPrint.js--JavaScript 在 HTML 中禁用打印、截屏、复制和粘贴
 
-## NoPrint.js--JavaScript在HTML中禁用打印、截屏、复制和粘贴
-
-::: tip NoPrint.js可以做什么
-  禁用复制和粘贴
-  禁用打印
-  禁用鼠标右键
-  禁用截图
-  禁用“另存为”/ Ctrl + S
-  自动模糊
+::: tip 用途
+禁用复制和粘贴
+禁用打印
+禁用鼠标右键
+禁用截图
+禁用“另存为”/ Ctrl + S
+自动模糊
 :::
 
 ### 简单使用
 
 ```js
 //引入noprint.js cdn地址 https://pdfanticopy.com/noprint.js
-var noPrint=true;//noPrint将禁用 CTRL + P 快捷键和打印功能。即使浏览者尝试通过浏览器菜单或按钮打印网页，打印时内容也会变成空白页面。可以将noPrint设置为false以关闭打印保护。
-var noCopy=true;//noCopy将禁用文本选择、鼠标右键、CTRL + S（保存网页）以及复制和粘贴功能。可以将noCopy设置为false以关闭此保护。
-var noScreenshot=true;//noScreenshot将禁用PrintScreen键以防止访问者轻松截屏和获取网页快照。可以将 noScreenshot设置为false以关闭此功能。
-var autoBlur=true;//一旦鼠标光标离开内容区域，autoBlur 会将网页上的所有内容变为模糊。浏览者可以通过单击网页来让内容变回清晰的样子。这可以防止人们通过第三方应用程序或 Opera工具栏上的快照功能截取屏幕截图。可以将autoBlur设置为false以禁用自动模糊
-
+var noPrint = true; //noPrint将禁用 CTRL + P 快捷键和打印功能。即使浏览者尝试通过浏览器菜单或按钮打印网页，打印时内容也会变成空白页面。可以将noPrint设置为false以关闭打印保护。
+var noCopy = true; //noCopy将禁用文本选择、鼠标右键、CTRL + S（保存网页）以及复制和粘贴功能。可以将noCopy设置为false以关闭此保护。
+var noScreenshot = true; //noScreenshot将禁用PrintScreen键以防止访问者轻松截屏和获取网页快照。可以将 noScreenshot设置为false以关闭此功能。
+var autoBlur = true; //一旦鼠标光标离开内容区域，autoBlur 会将网页上的所有内容变为模糊。浏览者可以通过单击网页来让内容变回清晰的样子。这可以防止人们通过第三方应用程序或 Opera工具栏上的快照功能截取屏幕截图。可以将autoBlur设置为false以禁用自动模糊
 ```
 
 官网地址 [noprint.js](https://pdfanticopy.com/index.html)
+
+## js-cookie 轻量级的处理 cookies 的 js API
+
+::: tip 用途
+js-cookie 是一个简单的，轻量级的处理 cookies 的 js API。
+:::
+
+相关介绍 [js-cookie](https://blog.csdn.net/qq_20802379/article/details/81436634)
+
+## react-dnd 拖拽库
+
+::: tip 用途
+React DnD 是 React 和 Redux 的核心作者 Dan Abramov 创造的一组 React 高阶组件，可以在保持组件分离的前提下帮助构建复杂的拖放接口。
+:::
+
+相关介绍 [react-dnd](https://www.jianshu.com/p/8a1e16d5519b)
+github [react-dnd](https://github.com/react-dnd/react-dnd/)
+
+## Velocity.js
+
+::: tip 用途
+Velocity 是一个简单易用、高性能、功能丰富的轻量级 JS 动画库。它能和 jQuery 完美协作，并和$.animate()有相同的 API， 但它不依赖 jQuery，可单独使用。 Velocity 不仅包含了 $.animate() 的全部功能， 还拥有：颜色动画、转换动画(transforms)、循环、 缓动、SVG 动画、和 滚动动画 等特色功能。
+:::
+
+中文文档 [Velocity.js](http://shouce.jb51.net/velocity/index.html)
