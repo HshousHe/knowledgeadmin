@@ -15,6 +15,11 @@ module.exports = [
         path: "/guide/thirdparty/WeChatPay",
     },
     {
+        title: "navigator-访问者浏览器信息",
+        collapsable: true,
+        path: "/guide/thirdparty/navigator",
+    },
+    {
         title: "npm包扩展推荐",
         collapsable: true,
         path: "/guide/personal/npm",
@@ -33,5 +38,10 @@ module.exports = [
         title: "趣味小知识",
         collapsable: true,
         path: "/guide/tips/home",
+    },
+    {
+        title: "网站导航",
+        collapsable: true,
+        path: "/guide/website/website",
     }
 ]
