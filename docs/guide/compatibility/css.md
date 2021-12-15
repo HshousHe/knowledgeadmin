@@ -53,6 +53,15 @@ git branch -d (branchname)
 
 git log 按 q 退出
 
+* :q ，退出（:quit的缩写）
+* :q!，退出且不保存（:quit!的缩写）
+* :wq，保存并退出
+* :wq!，保存并退出即使文件没有写入权限（强制保存退出）
+* :x，保存并退出（类似:wq，但是只有在有更改的情况下才保存）
+* :exit，保存并退出（和:x相同）
+* :qa，退出所有(:quitall的缩写)
+* :cq，退出且不保存（即便有错误）
+
 ## github 创建个人访问令牌
 
 ::: tip 介绍
@@ -207,3 +216,103 @@ Velocity 是一个简单易用、高性能、功能丰富的轻量级 JS 动画�
 :::
 
 中文文档 [Velocity.js](http://shouce.jb51.net/velocity/index.html)
+
+## vue中下载多个文件打包为一个zip
+
+### 需要使用到的库
+
+```js
+cnpm install -S axios
+cnpm install jszip
+cnpm install file-saver
+```
+### 具体使用
+```js
+<template>
+  <div class="home">
+     {{title}}
+  </div>
+</template>
+
+<style lang="scss" scoped>
+</style>
+<script>
+import JSZip from "jszip";
+import FileSaver from "file-saver";
+import axios from "axios";
+const getFile = (url) => {
+  return new Promise((resolve, reject) => {
+    axios({
+      method: "get",
+      url,
+      responseType: "arraybuffer",
+    })
+      .then((data) => {
+        resolve(data.data);
+      })
+      .catch((error) => {
+        reject(error.toString());
+      });
+  });
+};
+export default {
+  name: "App",
+  data(){
+    return{
+       title:""
+    }
+  },
+  created() {
+    this.filesToRar(
+      [
+        {
+          fileUrl: "https://test.hamatd.com/static/test.pdf",
+          renameFileName: "PDFtest.pdf",
+        },
+      ],
+      "测试压缩包"
+    );
+  },
+  watch: {},
+  methods: {
+    /**文件打包
+     * arrImages:文件list:[{fileUrl:文件url,renameFileName:文件名}]
+     * filename 压缩包名
+     * */
+    filesToRar(arrImages, filename) {
+      let _this = this;
+      let zip = new JSZip();
+      let cache = {};
+      let promises = [];
+      _this.title = "正在加载压缩文件";
+      for (let item of arrImages) {
+        const promise = getFile(item.fileUrl).then((data) => {
+          console.log(data)
+          // 下载文件, 并存成ArrayBuffer对象
+          const file_name = item.renameFileName; // 获取文件名
+          zip.file(file_name, data, { binary: true }); // 逐个添加文件
+          cache[file_name] = data;
+        });
+        promises.push(promise);
+      }
+      Promise.all(promises)
+        .then(() => {
+          zip.generateAsync({ type: "blob" }).then((content) => {
+            _this.title = "正在压缩";
+            // 生成二进制流
+            FileSaver.saveAs(content, filename); // 利用file-saver保存文件  自定义文件名
+            _this.title = "压缩完成";
+          });
+        })
+        .catch((reserr) => {
+            _this.title = '失败'+reserr;
+          console.log('失败',reserr)
+        });
+    },
+  },
+};
+</script>
+
+
+
+```
