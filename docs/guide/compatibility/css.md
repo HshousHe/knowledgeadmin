@@ -23,6 +23,8 @@ io.disconnect();
 ## GIT git 流水线技巧
 
 ```ts
+我代码已经恢复了 git reflog  然后git reset --hard HEAD{x}  x填你要回滚的那一步就ok了我代码已经恢复了 git reflog  然后git reset --hard HEAD{x}  x填你要回滚的那一步就ok了
+git reflog  然后git reset --hard HEAD{x}  x填你要回滚的那一步就ok了
 git stash   （将自己分支修改的内容暂存起来）
 git checkout 分支名  (一般切换到主分支)
 git pull origin 分支名   (一般拉取最新的主分支代码)
@@ -41,6 +43,14 @@ git branch 创建新分支
 
 删除分支命令：
 git branch -d (branchname)
+
+cd old-repo (进入旧的仓库目录)
+git remote set-url origin ssh://git@bitbucket.sw.nxp.com/dash/nfc-module.git （设定新的远程仓库地址）
+git push -u origin --all (将所有的分支都推送到新的仓库)
+git push origin --tags （将所有tag都推送到新的仓库）
+
+git merge --abort  git取消合并
+我代码已经恢复了 git reflog  然后git reset --hard HEAD{x}  x填你要回滚的那一步就ok了
 ```
 
 ## git 如何退出 VIM 编辑器
@@ -53,14 +63,14 @@ git branch -d (branchname)
 
 git log 按 q 退出
 
-* :q ，退出（:quit的缩写）
-* :q!，退出且不保存（:quit!的缩写）
-* :wq，保存并退出
-* :wq!，保存并退出即使文件没有写入权限（强制保存退出）
-* :x，保存并退出（类似:wq，但是只有在有更改的情况下才保存）
-* :exit，保存并退出（和:x相同）
-* :qa，退出所有(:quitall的缩写)
-* :cq，退出且不保存（即便有错误）
+- :q ，退出（:quit 的缩写）
+- :q!，退出且不保存（:quit!的缩写）
+- :wq，保存并退出
+- :wq!，保存并退出即使文件没有写入权限（强制保存退出）
+- :x，保存并退出（类似:wq，但是只有在有更改的情况下才保存）
+- :exit，保存并退出（和:x 相同）
+- :qa，退出所有(:quitall 的缩写)
+- :cq，退出且不保存（即便有错误）
 
 ## github 创建个人访问令牌
 
@@ -217,7 +227,7 @@ Velocity 是一个简单易用、高性能、功能丰富的轻量级 JS 动画�
 
 中文文档 [Velocity.js](http://shouce.jb51.net/velocity/index.html)
 
-## vue中下载多个文件打包为一个zip
+## vue 中下载多个文件打包为一个 zip
 
 ### 需要使用到的库
 
@@ -226,7 +236,9 @@ cnpm install -S axios
 cnpm install jszip
 cnpm install file-saver
 ```
+
 ### 具体使用
+
 ```js
 <template>
   <div class="home">
@@ -313,6 +325,10 @@ export default {
 };
 </script>
 
-
-
 ```
+
+## 各种文件类型文件类型
+
+| 后缀名 | 文件类型        | 类型（type）             |
+| ------ | --------------- | ------------------------ |
+| .xls   | Microsoft Excel | application/vnd.ms-excel |
