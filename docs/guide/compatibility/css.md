@@ -332,3 +332,187 @@ export default {
 | 后缀名 | 文件类型        | 类型（type）             |
 | ------ | --------------- | ------------------------ |
 | .xls   | Microsoft Excel | application/vnd.ms-excel |
+
+## 事件
+
+```
+vue
+
+@click//单击
+@mousedown//按下
+@mouseup//抬起
+@dblclick//双击
+@mousemove//移动
+@mouseleave//离开
+@mouseout //移出
+@mouseenter//进入
+@mouseover//在
+
+js
+onclick	IE3、N2	鼠标点击时触发此事件
+ondblclick	IE4、N4	鼠标双击时触发此事件
+onmousedown	IE4、N4	按下鼠标时触发此事件
+onmouseup	IE4、N4	鼠标按下后松开鼠标时触发此事件
+onmouseover	IE3、N2	当鼠标移动到某对象范围的上方时触发此事件
+onmousemove	IE4、N4	鼠标移动时触发此事件
+onmouseout	IE4、N3	当鼠标离开某对象范围时触发此事件
+onkeypress	IE4、N4	当键盘上的某个键被按下并且释放时触发此事件.
+onkeydown	IE4、N4	当键盘上某个按键被按下时触发此事件
+onkeyup	IE4、N4	当键盘上某个按键被按放开时触发此事件
+页面相关事件	onabort	IE4、N3	图片在下载时被用户中断
+onbeforeunload	IE4、N	当前页面的内容将要被改变时触发此事件
+onerror	IE4、N3	出现错误时触发此事件
+onload	IE3、N2	页面内容完成时触发此事件
+onmove	IE、N4	浏览器的窗口被移动时触发此事件
+onresize	IE4、N4	当浏览器的窗口大小被改变时触发此事件
+onscroll	IE4、N	浏览器的滚动条位置发生变化时触发此事件
+onstop	IE5、N	浏览器的停止按钮被按下时触发此事件或者正在下载的文件被中断
+onunload	IE3、N2	当前页面将被改变时触发此事件
+表单相关事件	onblur	IE3、N2	当前元素失去焦点时触发此事件
+onchange	IE3、N2	当前元素失去焦点并且元素的内容发生改变而触发此事件
+onfocus	IE3 、N2	当某个元素获得焦点时触发此事件
+onreset	IE4 、N3	当表单中RESET的属性被激发时触发此事件
+onsubmit	IE3 、N2	一个表单被递交时触发此事件
+滚动字幕事件	onbounce	IE4、N	在Marquee内的内容移动至Marquee显示范围之外时触发此事件
+onfinish	IE4、N	当Marquee元素完成需要显示的内容后触发此事件
+onstart	IE4、 N	当Marquee元素开始显示内容时触发此事件
+编辑事件	onbeforecopy	IE5、N	当页面当前的被选择内容将要复制到浏览者系统的剪贴板前触发此事件
+onbeforecut	IE5、 N	当页面中的一部分或者全部的内容将被移离当前页面[剪贴]并移动到浏览者的系统剪贴板时触发此事件
+onbeforeeditfocus	IE5、N	当前元素将要进入编辑状态
+onbeforepaste	IE5、 N	内容将要从浏览者的系统剪贴板传送[粘贴]到页面中时触发此事件
+onbeforeupdate	IE5、 N	当浏览者粘贴系统剪贴板中的内容时通知目标对象
+oncontextmenu	IE5、N	当浏览者按下鼠标右键出现菜单时或者通过键盘的按键触发页面菜单时触发的事件
+oncopy	IE5、N	当页面当前的被选择内容被复制后触发此事件
+oncut	IE5、N	当页面当前的被选择内容被剪切时触发此事件
+ondrag	IE5、N	当某个对象被拖动时触发此事件 [活动事件]
+ondragdrop	IE、N4	一个外部对象被鼠标拖进当前窗口或者帧
+ondragend	IE5、N	当鼠标拖动结束时触发此事件，即鼠标的按钮被释放了
+ondragenter	IE5、N	当对象被鼠标拖动的对象进入其容器范围内时触发此事件
+ondragleave	IE5、N	当对象被鼠标拖动的对象离开其容器范围内时触发此事件
+ondragover	IE5、N	当某被拖动的对象在另一对象容器范围内拖动时触发此事件
+ondragstart	IE4、N	当某对象将被拖动时触发此事件
+ondrop	IE5、N	在一个拖动过程中，释放鼠标键时触发此事件
+onlosecapture	IE5、N	当元素失去鼠标移动所形成的选择焦点时触发此事件
+onpaste	IE5、N	当内容被粘贴时触发此事件
+onselect	IE4、N	当文本内容被选择时的事件
+onselectstart	IE4、N	当文本内容选择将开始发生时触发的事件
+数据绑定	onafterupdate	IE4、N	当数据完成由数据源到对象的传送时触发此事件
+oncellchange	IE5、N	当数据来源发生变化时
+ondataavailable	IE4、N	当数据接收完成时触发事件
+ondatasetchanged	IE4、N	数据在数据源发生变化时触发的事件
+ondatasetcomplete	IE4、N	当来子数据源的全部有效数据读取完毕时触发此事件
+onerrorupdate	IE4、N	当使用onBeforeUpdate事件触发取消了数据传送时，代替onAfterUpdate事件
+onrowenter	IE5、N	当前数据源的数据发生变化并且有新的有效数据时触发的事件
+onrowexit	IE5、N	当前数据源的数据将要发生变化时触发的事件
+onrowsdelete	IE5、N	当前数据记录将被删除时触发此事件
+onrowsinserted	IE5、N	当前数据源将要插入新数据记录时触发此事件
+外部事件	onafterprint	IE5、N	当文档被打印后触发此事件
+onbeforeprint	IE5、N	当文档即将打印时触发此事件
+onfilterchange	IE4、N	当某个对象的滤镜效果发生变化时触发的事件
+onhelp	IE4、N	当浏览者按下F1或者浏览器的帮助选择时触发此事件
+onpropertychange	IE5、N	当对象的属性之一发生变化时触发此事件
+onreadystatechange	IE4、N	当对象的初始化属性值发生变化时触发此事件
+
+react 
+
+stoppropagation 中断冒泡事件向上的传递。
+定时触发的事件
+
+setTimeout //定时触发
+复制类事件
+
+onCopy //copy元素内容时触发
+onCut //内容剪切时触发
+onPaste //粘贴时触发
+组件类事件
+
+onCompositionEnd
+onCompositionStart
+onCompositionUpdate
+键盘类事件
+
+onKeyDown  //按下键盘按键时触发
+onKeyPress  //按下键盘按键并松开时触发
+onKeyUp //放开先前按下的  按键时触发
+表单类事件
+
+onChange //内容改变时触发
+onInput //事件在用户输入时触发
+onSubmit //提交时触发
+焦点类事件
+
+onFocus //获得焦点时触发
+onBlur //失去焦点时触发
+鼠标类事件
+
+onClick
+onContextMenu
+onDoubleClick
+onDrag
+onDragEnd
+onDragEnter
+onDragExit
+onDragLeave
+onDragOver
+onDragStart
+onDrop
+onMouseDown
+onMouseEnter
+onMouseLeave
+onMouseMove
+onMouseOut
+onMouseOver
+onMouseUp
+选择器类事件
+
+onSelect //事件会在文本框中的文本被选中时发生。
+触摸类事件
+
+onTouchCancel //一般在一些高级事件发生时，触发取消touch事件。例如暂停游戏，存档等。
+onTouchEnd //移走手指时触发
+onTouchMove //移动手指时触发
+onTouchStart //按下手指时触发
+插件类事件
+
+onScroll //元素滚动时执行 JavaScript
+轮事件
+
+onWheel //事件在鼠标滚轮在元素上下滚动时触发。
+多媒体类事件
+
+onAbort
+onCanPlay
+onCanPlayThrough
+onDurationChange
+onEmptied
+onEncrypted
+onEnded
+onError
+onLoadedData
+onLoadedMetadata
+onLoadStart
+onPause
+onPlay
+onPlaying
+onProgress
+onRateChange
+onSeeked
+onSeeking
+onStalled
+onSuspend
+onTimeUpdate
+onVolumeChange
+onWaiting
+图片类事件
+
+onLoad //事件会在页面或图像加载完成后立即发生。
+onError //事件会在文档或图像加载过程中发生错误时被触发。
+动画类事件
+
+onAnimationStart //动画开始时调用
+onAnimationEnd //动画结束时调用。但有点问题是连续播放时可能不会触发
+onAnimationIteration
+转换类事件
+
+onTransitionEnd
+```
