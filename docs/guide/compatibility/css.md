@@ -72,6 +72,43 @@ git log 按 q 退出
 - :qa，退出所有(:quitall 的缩写)
 - :cq，退出且不保存（即便有错误）
 
+## git提交pr
+
+1. fork仓库
+2. 在自己的仓库中查看fork的仓库 并git clone 到自己本地
+3. git [statu](https://so.csdn.net/so/search?q=status&spm=1001.2101.3001.7020)s 查看当前处于哪个分支 可以切换到原始仓库主代码分支
+4. git remote -v 查看当前连接（当前只能查看自己的远程连接）
+5. ```js
+   git remote add upstream https://gitlab.XXXXXX.com/WZ/opencv_demo.git //添加上游git仓库地址
+   git fetch upstream  // 抓取原仓库的更新
+   git rebase upstream/sit //更新当前本地分支和上游分支sit同步代码（注意:sit为分支名 ）
+   git push origin sit//推送到自己的仓库
+   ```
+
+   如果上游有一个新的分支，想合并到自己这里：
+
+git branch
+
+git remote -v
+
+git remote set-url origin https://gitlab.X.com/yangninghua/hsr-pcl-code.git   自己
+
+git remote -v
+
+git remote add upstream  https://gitlab.Z.com/other_name/hsr-pcl-code  上游
+
+git fetch upstream
+git rebase upstream/develop
+git push origin develop
+
+git status
+
+git add ***.py
+
+git commit -m "***********"
+
+git push origin debug_branch
+
 ## github 创建个人访问令牌
 
 ::: tip 介绍
